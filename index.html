@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <script>
+    function change_coef()
+    {
+      var coef = document.getElementById('rea_coef').textContent;
+      coef++;
+      if (coef == 4) coef = 0;
+      rea_coef.innerHTML = coef;
+    }
+
+    function change_note()
+    {
+      var note = document.getElementById('rea_note').textContent;
+      if (note == 'A') rea_note.innerHTML = 'B';
+      if (note == 'B') rea_note.innerHTML = 'C';
+      if (note == 'C') rea_note.innerHTML = 'D';
+      if (note == 'D') rea_note.innerHTML = 'A';
+    }
+    </script>
+
+    <div class="container">
+      <a id="rea_coef" onclick="change_coef()" class="waves-effect waves-light btn">0</a>
+      <a id="rea_note" onclick="change_note()" class="waves-effect waves-light btn">A</a>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>
